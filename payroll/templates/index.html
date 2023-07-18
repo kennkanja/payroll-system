@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturers and Exams</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <div class="row">
+        <a href="" style="text-decoration: none;color: white;"><h2>Lecturers</h2></a>
+        <div class="row__posters">
+    
+            {% for lecturer in lecturers %}
+    
+            <h3>{{lecturer.name}}</h3>
+            <p>{{lecturer.unit_code}}</p>
+            <p>{{lecturer.course}}</p>    
+            <p>{{lecturer.department}}</p> 
+            <p>{{lecturer.unit_code}}</p> 
+            <p>{{lecturer.unit_code}}</p>        
+    
+            {% endfor %}
+        </div>
+    </div>
+    
+    
+</body>
+</html>
