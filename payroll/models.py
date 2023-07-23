@@ -25,7 +25,7 @@ class Lecturer(models.Model):
     phone_no = models.CharField(max_length = 100)
     exam = models.ForeignKey(Exam, on_delete=models.DO_NOTHING)  
     cost = models.IntegerField()
-    quality =  models.IntegerField()
+    quantity =  models.IntegerField()
     
 
     def __str__(self):

@@ -18,6 +18,7 @@ class LecturerViewSet(viewsets.ModelViewSet):
 class HomePageView(ListView):
     model = Home
     extra_context = {
-        "lecturers": Lecturer.objects.all()
+        "lecturers": Lecturer.objects.all(),
+        "exams":Exam.objects.all()
     }
     template_name = "index.html"

@@ -9,23 +9,152 @@
 </head>
 <body>
 
-    <div class="row">
-        <a href="" style="text-decoration: none;color: white;"><h2>Lecturers</h2></a>
-        <div class="row__posters">
     
+     
+   <div class="box-wrap" style="padding: 0px 16px;">
+    <div class="table-wrap" style="max-width: 1200px;
+    margin: 80px auto;
+    overflow-x: auto;">
+        <table style="border: 1px solid #ddd;border-collapse: collapse;
+        width: 100%;">
+            <h3>Lecturers</h3>
+           <thead>
+            <tr>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;background: #000000d6;
+   color: #fff;">Name </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;background: #000000d6;
+   color: #fff;">Phone No </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;background: #000000d6;
+   color: #fff;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;">Exam </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;background: #000000d6;
+   color: #fff;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;">Cost </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;background: #000000d6;
+   color: #fff;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;">Quantity </th>
+             </tr>
+           </thead>
+           <tbody >
+
             {% for lecturer in lecturers %}
-    
-            <h3>{{lecturer.name}}</h3>
-            <p>{{lecturer.unit_code}}</p>
-            <p>{{lecturer.course}}</p>    
-            <p>{{lecturer.department}}</p> 
-            <p>{{lecturer.unit_code}}</p> 
-            <p>{{lecturer.unit_code}}</p>        
-    
+            <tr style=":nth-child(odd){
+                tr:nth-child(-n+3);
+                background: #69b2ebcc;
+                color: #000;
+                font-weight: 500;
+              }">
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{lecturer.name}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{lecturer.phone_no}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{lecturer.exam}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{lecturer.cost}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{lecturer.quantity}}</td>
+            </tr>
             {% endfor %}
-        </div>
+           </tbody>
+       </table>
+       
     </div>
-    
-    
+   </div>
+
+   <div class="box-wrap" style="padding: 0px 16px;">
+    <div class="table-wrap" style="max-width: 1200px;
+    margin: 80px auto;
+    overflow-x: auto;">
+        <table style="border: 1px solid #ddd;border-collapse: collapse;
+        width: 100%;">
+            <h3>Exam</h3>
+           <thead>
+            <tr>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;background: #000000d6;
+   color: #fff;">Name </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;background: #000000d6;
+   color: #fff;">Unit Code </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;background: #000000d6;
+   color: #fff;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;">Course </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;background: #000000d6;
+   color: #fff;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;">Department </th>
+                <th style="border: 1px solid #ddd; text-align: left;
+                font-size: 18px;background: #000000d6;
+   color: #fff;padding: 15px;
+  white-space: nowrap;
+                text-transform: capitalize;">Exam type </th>
+             </tr>
+           </thead>
+           <tbody >
+
+            {% for exam in exams %}
+            <tr style=":nth-child(odd){
+                tr:nth-child(-n+3);
+                background: #69b2ebcc;
+                color: #000;
+                font-weight: 500;
+              }">
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{exam.name}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{exam.unit_code}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{exam.course}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{exam.department}}</td>
+               <td style="border: 1px solid #ddd;text-align: left;
+               font-size: 18px;padding: 15px;
+  white-space: nowrap;
+               text-transform: capitalize;">{{exam.exam_type}}</td>
+            </tr>
+            {% endfor %}
+           </tbody>
+       </table>
+       
+    </div>
+   </div>
 </body>
 </html>
